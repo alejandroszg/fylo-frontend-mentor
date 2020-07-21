@@ -488,9 +488,6 @@ footer {
         padding: 20px 0;
         color: #FEFFFF;
     }
-    .menu1 ul li {
-        text-align: left;
-    }
     .contact {
         display: flex;
         justify-content: flex-start;
@@ -499,7 +496,13 @@ footer {
 
     }
     .menu1 {
+        display: flex;
+        justify-content: flex-start;
         margin-bottom: 20px;
+        text-align: left;
+    }
+    .footer-container .menu1 ul li {
+        text-align: left;
     }
     .social {
         text-align: center;
