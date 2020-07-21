@@ -23,16 +23,8 @@ body {
     margin: 0 auto;
 }
 
-.menu li{
-    display: inline-block;
-}
 
-.menu li a {
-    text-decoration: none;
-    font-family: 'Raleway', sans-serif;
-    color: #FEFFFF;
-    margin-left: 40px;
-}
+/*----------  Start of HEAD  ----------*/
 
 header {
     display: flex;
@@ -51,17 +43,20 @@ header {
     color: #FEFFFF;
 }
 
-.btn-started {
-    background: var(--button-bg);
-    outline: none;
-    border: none;
-    border-radius: 2em;
-    padding: 15px 70px;
+.menu li{
+    display: inline-block;
+}
+
+.menu li a {
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
     color: #FEFFFF;
-    position: relative;
-    z-index: 200;
-    margin-bottom: 30px;
-    cursor: pointer;
+    margin-left: 40px;
+}
+
+.main-photo img {
+    height: auto;
+    padding-top: 30px;
 }
 
 .main-title {
@@ -79,19 +74,23 @@ header {
     margin: 10px auto;
 }
 
-.background-section {
-    width: 100%;
-    height: auto;
-    position: absolute;
-    bottom: -260px;
-    left: 0;
-    z-index: 1;
+.btn-started {
+    background: var(--button-bg);
+    outline: none;
+    border: none;
+    border-radius: 2em;
+    padding: 15px 70px;
+    color: #FEFFFF;
+    position: relative;
+    z-index: 200;
+    margin-bottom: 30px;
+    cursor: pointer;
 }
-4
-.main-photo img {
-    height: auto;
-    padding-top: 30px;
-}
+
+/*----------  End of HEAD  ----------*/
+
+
+/*----------  Start of SERVICES  ----------*/
 
 .services {
     background: var(--darkblue-mainbg);
@@ -115,12 +114,16 @@ header {
     font-weight: 700;
 }
 
-
 .services .container .icons-container .feature .icon-body-text {
     color: #FEFFFF;
     font-size: 14px;
     line-height: 20px;
 }
+
+/*----------  End of SERVICES  ----------*/
+
+
+/*----------  Start of PRODUCTIVE  ----------*/
 
 .productive {
     background-color: var(--darkblue-mainbg);
@@ -213,6 +216,11 @@ header {
     font-weight: 700;
 }
 
+/*----------  End of SERVICES  ----------*/
+
+
+/*----------  Start of FORM  ----------*/
+
 .form {
     background: var(--darkblue-testimonials);
     margin: 0 auto;
@@ -269,6 +277,11 @@ header {
     border-radius: 2em;
     cursor: pointer;
 }
+
+/*----------  End of FORM  ----------*/
+
+
+/*----------  Start of FOOTER  ----------*/
 
 footer {
     width: 100%;
@@ -363,51 +376,12 @@ footer {
     cursor: pointer;
 }
 
-@media screen and (max-width: 768px){
-    .footer-container {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        grid-template-areas: 
-            "a b"
-            "c d"
-            "e e";
-    }
+/*----------  End of FOOTER  ----------*/
 
-    .footer-container .social ul li {
-        margin-right: 2px;
-    }
-    .form .btn-free {
-        margin-top: 10px;
-    }
-    .testimonials {
-        padding: 100px 0 20px 0;
-    }
-    .main-photo img{
-        width: 100%;
-    }
-    .info {
-        grid-area: a
-    }
-    .contact {
-        grid-area: c;
-    }
-    .menu1:first-of-type {
-        grid-area: b;
-    }
-    .menu1 ul li {
-        text-align: right;
-    }
-    .social {
-        grid-area: e;
-        text-align: center;
-    }
-    .btn-free {
-        width: 60%;
-    }
-    .testimonials {
-        background-position: left 15px top 60px;
-    }
-}
+
+/*----------  Start of MEDIA QUERIES  ----------*/
+
+/* Mobile */
 
 @media screen and (max-width: 630px){
     .container {
@@ -532,6 +506,56 @@ footer {
     }
 }
 
+/* Mobile */
+
+/* Tablet / Landscape */
+
+@media screen and (max-width: 768px){
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 
+            "a b"
+            "c d"
+            "e e";
+    }
+
+    .footer-container .social ul li {
+        margin-right: 2px;
+    }
+    .form .btn-free {
+        margin-top: 10px;
+    }
+    .testimonials {
+        padding: 100px 0 20px 0;
+    }
+    .main-photo img{
+        width: 100%;
+    }
+    .info {
+        grid-area: a
+    }
+    .contact {
+        grid-area: c;
+    }
+    .menu1:first-of-type {
+        grid-area: b;
+    }
+    .menu1 ul li {
+        text-align: right;
+    }
+    .social {
+        grid-area: e;
+        text-align: center;
+    }
+    .btn-free {
+        width: 60%;
+    }
+    .testimonials {
+        background-position: left 15px top 60px;
+    }
+}
+
 @media screen and (max-width: 1024px){
     .main-photo img {
         width: 100%;
@@ -551,3 +575,5 @@ footer {
         margin-top: 10px;
     }
 }
+/* Tablet / Landscape */
+/*----------  End of MEDIA QUERIES  ----------*/
