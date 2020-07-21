@@ -38,18 +38,17 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 30px;
+    padding-top: 40px;
 }
 
 .hero {
     background: url('images/bg-curvy-desktop.svg'), var(--darkblue-intro);
     background-position: center bottom;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 100%;
     margin: 0 auto;
     text-align: center;
     color: #FEFFFF;
-    position: relative;
 }
 
 .btn-started {
@@ -65,19 +64,19 @@ header {
     cursor: pointer;
 }
 
-.titles {
+.main-title {
     font-family: 'Raleway', sans-serif;
     font-size: 32px;
-    position: relative;
-    z-index: 3000;
+    width: 60%;
+    margin: 20px auto;
 }
 
 .hero-text {
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     line-height: 20px;
-    position: relative;
-    z-index: 2000;
+    width: 60%;
+    margin: 10px auto;
 }
 
 .background-section {
@@ -102,17 +101,17 @@ header {
 .icons-container {
     display: grid;
     text-align: center;
-    grid-template-columns: 300px 300px;
+    grid-template-columns: 35% 35%;
     grid-template-rows: 300px 300px;
     justify-content: center;
     align-items: center;
-    column-gap: 100px;
+    column-gap: 120px;
 }
 
 .services .container .icons-container .feature .icon-title {
     color: #FEFFFF;
     font-size: 18px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-weight: 700;
 }
 
@@ -120,6 +119,7 @@ header {
 .services .container .icons-container .feature .icon-body-text {
     color: #FEFFFF;
     font-size: 14px;
+    line-height: 20px;
 }
 
 .productive {
@@ -130,6 +130,14 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.prod-titles {
+    font-family: 'Open Sans', sans-serif;
+    color: #FEFFFF;
+    font-weight: 700;
+    font-size: 32px;
+    width: 60%;
 }
 
 .productive .prod-card .col1 {
@@ -150,12 +158,17 @@ header {
     margin: 0;
 }
 
+.productive .prod-card .col2 p {
+    line-height: 24px;
+}
+
 .how {
     padding-bottom: 5px;
     border-bottom: 1px solid hsl(198, 60%, 50%);
     background: url('images/icon-arrow.svg') no-repeat;
     background-position: right 2px;
     padding-right: 20px;
+    cursor: pointer;
 }
 
 .testimonials {
@@ -204,14 +217,14 @@ header {
     background: var(--darkblue-testimonials);
     margin: 0 auto;
     text-align: center;
-    width: 60%;
+    width: 80%;
     padding: 20px 30px;
     border-radius: 10px;
     -webkit-box-shadow: 8px 13px 21px -11px rgba(0,0,0,0.75);
     -moz-box-shadow: 8px 13px 21px -11px rgba(0,0,0,0.75);
     box-shadow: 8px 13px 21px -11px rgba(0,0,0,0.75);
     position: relative;
-    bottom: -100px;
+    bottom: -110px;
     z-index: 20;
 }
 
@@ -225,6 +238,10 @@ header {
     color: #FEFFFF;
     width: 80%;
     margin: 0 auto;
+}
+
+.form-message {
+    padding-bottom: 20px;
 }
 
 .form .form-input {
@@ -253,6 +270,7 @@ header {
 }
 
 footer {
+    width: 100%;
     background: var(--darkblue-footer);
     position: absolute;
     padding-top: 120px;
@@ -262,18 +280,39 @@ footer {
     padding-top: 30px;
 }
 
+.mail {
+    display: inline-block;
+    background: url('images/icon-email.svg') no-repeat;
+    background-position: left center 10px;
+    padding-left: 25px;
+    margin-bottom: 10px;
+}
+
+.phone {
+    background: url('images/icon-phone.svg') no-repeat;
+    background-position: left center 10px;
+    padding-left: 25px;
+    margin-bottom: 10px;
+}
+
+.info {
+    background: url('images/icon-location.svg') no-repeat;
+    background-position: left center 10px;
+    padding-left: 25px;
+}
+
 .footer-container {
     padding: 20px 0;
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
     gap: 30px;
-    color: white;
+    color: #FEFFFF;
 }
 
 .footer-container .info {
     display: flex;
-    align-items: flex-start;
-    column-gap: 20px;
+    justify-content: flex-start;
+    margin-bottom: 10px;
 }
 
 .footer-container .info p {
@@ -283,7 +322,8 @@ footer {
 .footer-container .contact {
     display: flex;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
+    flex-direction: column;
 }
 
 .footer-container .contact img {
@@ -301,6 +341,7 @@ footer {
 }
 .footer-container .menu1 ul li{
     margin-bottom: 10px;
+    cursor: pointer;
 }
 
 .footer-container .social ul {
@@ -318,4 +359,136 @@ footer {
     border-radius: 50%;
     display: inline-block;
     margin-right: 10px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px){
+    .footer-container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .footer-container .social ul li {
+        margin-right: 2px;
+    }
+    .form .btn-free {
+        margin-top: 10px;
+    }
+    .testimonials {
+        padding: 100px 0 20px 0;
+    }
+    .main-photo img{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 630px){
+    .container {
+        width: 85%;
+    }
+    header {
+        padding-bottom: 40px;
+    }
+    .hero {
+        padding-bottom: 30px;
+    }
+    .main-title {
+        font-size: 24px;
+        line-height: 34px;
+        width: 90%;
+    }
+    .hero-text {
+        line-height: 24px;
+        width: 100%;
+    }
+    .logo {
+        width: 30%;
+    }   
+    .menu li a {
+        margin-left: 10px;
+    }
+    .menu ul {
+        margin: 0;
+        padding: 0;
+    }
+    .icons-container {
+        display: grid;
+        text-align: center;
+        grid-template-columns: 80%;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+    }
+    .feature:first-child{
+        padding-top: 70px;
+    }
+    .feature {
+        padding-bottom: 20px;
+    }
+    .prod-card {
+        flex-direction: column;
+        width: 100%;
+    }
+    .productive .prod-card .col1, .productive .prod-card .col2 {
+        width: 100%;
+    }
+    .prod-titles {
+        padding-top: 20px;
+        font-size: 18px;
+        width: 100%;
+    }
+    .testimonials {
+        padding: 100px 0 10px 0;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        background: url('images/bg-quotes.png') no-repeat;
+        background-position: left 15px top 60px;
+    }
+    .testimonials .card {
+        padding: 10px;
+        color: #FEFFFF;
+        border-radius: 5px;
+        word-break: keep-all;
+        width: 85%;
+        margin-bottom: 30px;
+    }
+    .form {
+        width: 90%;
+        padding: 10px;
+    }
+    .form .form-text{
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        text-align: 24px;
+    }
+
+    .form .form-message {
+        width: 100%;
+    }
+    .form .form-message .form-input input{
+        width: 100%;
+        margin: 0;
+    }
+    .form .form-message .btn-free {
+        width: 100%;
+    }
+    footer {
+        margin: 0 auto;
+    }
+    .footer-container {
+        display: inline-block;
+        padding: 20px 0;
+        color: #FEFFFF;
+    }
+    .contact {
+        display: flex;
+        justify-content: flex-start;
+        margin: 0;
+        padding: 0;
+
+    }
+    .menu1 {
+        margin-bottom: 20px;
+    }
 }
