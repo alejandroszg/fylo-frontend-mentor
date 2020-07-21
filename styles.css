@@ -232,6 +232,7 @@ header {
     font-family: 'Open Sans', sans-serif;
     color: #FEFFFF;
     font-weight: 700;
+    font-size: 32px
 }
 
 .form .form-text {
@@ -364,7 +365,12 @@ footer {
 
 @media screen and (max-width: 768px){
     .footer-container {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: 
+            "a b"
+            "c d"
+            "e e";
     }
 
     .footer-container .social ul li {
@@ -379,6 +385,28 @@ footer {
     .main-photo img{
         width: 100%;
     }
+    .info {
+        grid-area: a
+    }
+    .contact {
+        grid-area: c;
+    }
+    .menu1:first-of-type {
+        grid-area: b;
+    }
+    .menu1 ul li {
+        text-align: right;
+    }
+    .social {
+        grid-area: e;
+        text-align: center;
+    }
+    .btn-free {
+        width: 60%;
+    }
+    .testimonials {
+        background-position: left 15px top 60px;
+    }
 }
 
 @media screen and (max-width: 630px){
@@ -386,6 +414,7 @@ footer {
         width: 85%;
     }
     header {
+        padding-top: 20px;
         padding-bottom: 40px;
     }
     .hero {
@@ -462,14 +491,18 @@ footer {
         text-align: center;
         text-align: 24px;
     }
+    
+    .form .form-message .form-input {
+        overflow: hidden;
+    }
+    
+    .form .form-input {
+        margin-top: 20px;
+        padding: 15px 20px;
+        width: 70%;
+        margin-right: 0;
+    }
 
-    .form .form-message {
-        width: 100%;
-    }
-    .form .form-message .form-input input{
-        width: 100%;
-        margin: 0;
-    }
     .form .form-message .btn-free {
         width: 100%;
     }
@@ -481,6 +514,9 @@ footer {
         padding: 20px 0;
         color: #FEFFFF;
     }
+    .menu1 ul li {
+        text-align: left;
+    }
     .contact {
         display: flex;
         justify-content: flex-start;
@@ -490,5 +526,28 @@ footer {
     }
     .menu1 {
         margin-bottom: 20px;
+    }
+    .social {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .main-photo img {
+        width: 100%;
+    }
+    .footer-container .social ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+    .footer-container .social ul li {
+        margin-right: 4px;
+    }
+    .prod-titles {
+        width: 100%;
+    }
+    .form .form-message .btn-free {
+        margin-top: 10px;
     }
 }
